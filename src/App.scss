@@ -1,0 +1,18 @@
+#root {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+ul {
+    li.img-thumbnail {
+        list-style-type: none;
+
+        img {
+            width: 100%;
+            max-width: 150px;
+        }
+    }
+}

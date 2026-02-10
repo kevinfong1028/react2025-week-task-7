@@ -1,0 +1,36 @@
+import { useSelector } from "react-redux";
+
+function MessageToast() {
+    const messages = useSelector((state) => state.message); // array
+    return (
+        <div
+            className="toast-container position-fixed"
+            style={{ bottom: "15px", right: "15px" }}
+        >
+            {messages.map((message, index) => (
+                <div
+                    key={message.id}
+                    className="toast show"
+                    role="alert"
+                    aria-live="assertive"
+                    aria-atomic="true"
+                >
+                    <div
+                        className={`toast-header text-white bg-${message.type}`}
+                    >
+                        <strong className="me-auto">{message.title}</strong>
+                        <button
+                            type="button"
+                            className="btn-close"
+                            data-bs-dismiss="toast"
+                            aria-label="Close"
+                        />
+                    </div>
+                    <div className="toast-body">{message.text}</div>
+                </div>
+            ))}
+        </div>
+    );
+}
+
+export default MessageToast;
