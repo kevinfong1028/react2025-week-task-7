@@ -13,8 +13,8 @@ function Login() {
         formState: { errors },
     } = useForm({
         defaultValues: {
-            username: "sbdrumer1028@gmail.com",
-            password: "kv12345",
+            username: "",
+            password: "",
         },
         mode: "onChange",
     });
